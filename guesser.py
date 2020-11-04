@@ -41,6 +41,21 @@ def prime_check(number):
         print("not a prime number")
 
 
+#   VALIDATE INPUT
+
+def validate():
+    while True:
+        answer = input("==>")
+        try:
+            int_answer = int(answer)
+            if 1 <= int_answer <= 10:
+                return int_answer
+            else:
+                print("Invalid Input! must be between 1 and 10!")
+        except ValueError:
+            print("Invalid Input! Must be a number!")
+
+
 # START GAME
 
 def start():
@@ -59,7 +74,7 @@ def run():
         # DEBUB -- PRINT NUMBER
         # print(number)
         print("Guess my number:")
-        answer = int(input("==>"))
+        answer = validate()
         # 1st TRY
         if answer == number:
             print("Correct!")
@@ -74,7 +89,7 @@ def run():
                 print("Even number!")
             else:
                 print("Odd number!")
-            answer = int(input("==>"))
+            answer = validate()
             # 2nd TRY
             if answer == number:
                 print("Correct!")
@@ -85,7 +100,7 @@ def run():
                 print("Wrong answer! 2/3")
                 print("Hint 2:")
                 prime_check(number)
-                answer = int(input("==>"))
+                answer = validate()
                 # 3rd TRY
                 if answer == number:
                     print("Correct!")
