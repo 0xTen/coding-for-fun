@@ -41,7 +41,7 @@ def prime_check(number):
         print("not a prime number")
 
 
-#   VALIDATE INPUT
+# VALIDATE INPUT
 
 def validate():
     while True:
