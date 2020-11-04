@@ -115,12 +115,3 @@ while True:
         else:
             # LOOP
             launch = start()
-
-ok = 0
-while ok != 1:
-    answer = input("==>")
-    try:
-        int_answer = int(input("==>"))
-        ok = 1
-    except ValueError:
-        print("Invalid Input")
