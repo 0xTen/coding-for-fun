@@ -53,7 +53,11 @@ def validate():
             else:
                 print("Invalid Input! must be between 1 and 10!")
         except ValueError:
-            print("Invalid Input! Must be a number!")
+            if answer == "exit" or answer == "q" or answer == "quit":
+                print("Bye!")
+                exit(0)
+            else:
+                print("Invalid Input! Must be a number!")
 
 
 # START GAME
@@ -70,6 +74,8 @@ def run():
         print()
         print(f"ROUND {current_round}/10")
         print(f"SCORE {score}")
+        print("exit/quit/q to exit")
+        print("###################")
         number = random.randint(1, 10)
         # DEBUB -- PRINT NUMBER
         # print(number)
